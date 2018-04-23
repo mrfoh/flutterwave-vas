@@ -1,6 +1,6 @@
 import FlutterwaveVASBase from "./base";
 import { SERVICE_BILLERS_URL, BILLER_PRODUCTS_URL, USSD_PAYMENT_URL } from "./constants";
-import { FlutterwaveVASServicCodes, USSDPaymentOptions, Responses } from "./types";
+import { FlutterwaveVASServiceCodes, USSDPaymentOptions, Responses } from "./types";
 
 export default class FlutterwaveVASAirtime {
     private fwBase: FlutterwaveVASBase;
@@ -24,7 +24,7 @@ export default class FlutterwaveVASAirtime {
      * @returns {Promise<Responses.ServiceBillersResponse>}
      */
     async getBillers(): Promise<Responses.ServiceBillersResponse> {
-        return this.fwBase.get<Responses.ServiceBillersResponse>(`${this.billersEndpoint}/${FlutterwaveVASServicCodes.AIRTIME}`);
+        return this.fwBase.get<Responses.ServiceBillersResponse>(`${this.billersEndpoint}/${FlutterwaveVASServiceCodes.AIRTIME}`);
     }
 
     /**
