@@ -1,0 +1,48 @@
+{
+  "name": "flutterwave-vas",
+  "version": "0.0.1",
+  "main": "lib/index.js",
+  "typings": "./lib/index.d.ts",
+  "repository": "git@github.com:mrfoh/flutterwave-vas.git",
+  "author": "Patrick Foh <patrickfoh@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "prepublish": "rm -rf ./lib && yarn build",
+    "build": "./node_modules/.bin/tsc",
+    "test": "./node_modules/.bin/jest",
+    "docs": "rm -rf ./docs && mkdir ./docs && ./node_modules/.bin/typedoc --ignoreCompilerErrors --out ./docs/ ./src/"
+  },
+  "dependencies": {
+    "joi": "^13.2.0",
+    "request": "^2.85.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^22.2.3",
+    "@types/joi": "^13.0.7",
+    "@types/request": "^2.47.0",
+    "jest": "^22.4.3",
+    "ts-jest": "^22.4.4",
+    "typedoc": "^0.11.1",
+    "typescript": "^2.8.3"
+  },
+  "files": [
+    "lib"
+  ],
+  "jest": {
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/lib"
+    ],
+    "transform": {
+      "^.+\\.tsx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json"
+    ]
+  }
+}
