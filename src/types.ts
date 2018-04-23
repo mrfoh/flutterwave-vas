@@ -41,7 +41,7 @@ export interface USSDPaymentOptions {
 /**
  * Currently available services on Flutterwave VAS platform
  */
-export enum FlutterwaveVASServicCodes {
+export enum FlutterwaveVASServiceCodes {
     AIRTIME = "AIRTIME",
     MOBILE_DATA = "MOBILEDATA",
     CABLE_BILL = "CABLEBILLS",
