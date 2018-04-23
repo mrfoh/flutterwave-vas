@@ -1,6 +1,12 @@
-# Flutterwave VAS
+# Flutterwave VAS SDK
 
 ### Installation
-`yarn add flutterwave-vas --save`
+````
+yarn add flutterwave-vas --save
+```
+
 OR
-`npm install flutterwave-vas --save`
+
+````
+npm install flutterwave-vas --save
+````
